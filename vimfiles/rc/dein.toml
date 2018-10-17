@@ -8,5 +8,13 @@ repo = 'thinca/vim-quickrun'
 repo = 'jonathanfilip/vim-lucius'
 
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
+repo = 'morhetz/gruvbox'
 
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'

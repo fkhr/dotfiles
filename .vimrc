@@ -44,11 +44,20 @@ nnoremap <F2> :QuickRun<Enter>
 nnoremap <F3> :QuickRun
 let g:quickrun_config = {'*':{'hook/time/enable':'1'},}
 
+" indent guid
+let g:indent_guides_enable_on_vim_startup = 1
+
+" nerdtree
+autocmd vimenter * NERDTree
+
+"deoplete
+let g:deoplete#enable_at_startup = 1
+
 " my keymap
 noremap <CR> o<ESC>
 noremap <S-CR> O <ESC>
 
 " other settings
 set t_Co=256
-colorscheme hybrid 
+colorscheme gruvbox 
 set background=dark
