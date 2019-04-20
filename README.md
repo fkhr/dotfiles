@@ -2,9 +2,9 @@
 
 # How to set files
 ```
-ln -s vimrc ~/.vimrc
+ln -s "$(pwd)/vimrc" ~/.vimrc
 ln -s vimfiles ~/.vim
-ln -s tmux.conf ~/.tmux_conf
+ln -s "$(pwd)/tmux.conf" ~/.tmux_conf
 ```
 After that, install dein.vim
 ```
