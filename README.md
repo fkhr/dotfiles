@@ -2,8 +2,9 @@
 
 # How to set files
 ```
-ln -s .vimrc ~/.vimrc
+ln -s vimrc ~/.vimrc
 ln -s vimfiles ~/.vim
+ln -s tmux.conf ~/.tmux_conf
 ```
 After that, install dein.vim
 ```
