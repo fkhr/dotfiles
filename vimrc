@@ -10,6 +10,8 @@ set expandtab		"translate tab into space
 set splitbelow		"display new window below
 
 " ---- start dein.vim base setting ---- 
+" let g:python3_host_prog = $PYENV_ROOT.'/shims/python'
+" let g:pythonx_host_prog = $PYENV_ROOT.'/shims/python'
 if &compatible
  set nocompatible
 endif
@@ -21,12 +23,16 @@ if dein#load_state('~/.vim/bundles')
 
  call dein#add('~/.vim/bundles')
  call dein#add('Shougo/deoplete.nvim')
+ call dein#add('lambdalisue/vim-pyenv')
+ call dein#add('vim-airline/vim-airline')
+ call dein#add('vim-airline/vim-airline-themes')
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
    call dein#add('roxma/vim-hug-neovim-rpc')
  endif
 
  call dein#load_toml('~/.vim/rc/dein.toml',      {'lazy': 0})
+ call dein#load_toml('~/.vim/rc/dein_lazy.toml', {'lazy': 1})
  call dein#end()
  call dein#save_state()
 endif
@@ -67,3 +73,23 @@ noremap <S-CR> O <ESC>
 set t_Co=256
 colorscheme gruvbox 
 set background=dark
+
+" airline settings
+set t_Co=256
+set laststatus=2
+set showtabline=2
+let g:airline_section_x = '%{&filetype}'
+let g:airline_powerline_fonts=1
+let g:airline_theme='base16'
+
+" jedi settings
+if jedi#init_python()
+  function! s:jedi_auto_force_py_version() abort
+    let g:jedi#force_py_version = pyenv#python#get_internal_major_version()
+  endfunction
+  augroup vim-pyenv-custom-augroup
+    autocmd! *
+    autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
+    autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
+  augroup END
+endif
