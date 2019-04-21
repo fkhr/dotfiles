@@ -10,8 +10,6 @@ set expandtab		"translate tab into space
 set splitbelow		"display new window below
 
 " ---- start dein.vim base setting ---- 
-" let g:python3_host_prog = $PYENV_ROOT.'/shims/python'
-" let g:pythonx_host_prog = $PYENV_ROOT.'/shims/python'
 if &compatible
  set nocompatible
 endif
