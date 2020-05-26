@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Mac OS Mojave
+- Mac OS
 - pyenv
 - Homebrew
 
@@ -17,6 +17,16 @@ At first, install fonts for powerline (iterm2)  and airline (vim).
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 ```
+
+### Zsh
+
+- Install prezto
+- remove ~/.zshrc
+- Install peco with `brew install peco`
+- `ln -s "$(pwd)/zshrc" ~/.zshrc`
+ 
+
+
 
 After install Hack Nerd Font, set iterm2 font as "Hack Regular Nerd Font Complete".
 
