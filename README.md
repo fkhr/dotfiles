@@ -35,10 +35,11 @@ For vim Setting, install vim by vim and make symbolic links of vim setting files
 
 ```shell
 brew install vim
-# install neovim python package on system Python3
+# install neovim python package on system Python3 (optional)
 /usr/local/bin/pip3 install neovim
+
 ln -s "$(pwd)/vimrc" ~/.vimrc
-ln -s vimfiles ~/.vim
+ln -s "$(pwd)/vimfiles" ~/.vim
 ```
 
 After that, install dein.vim
