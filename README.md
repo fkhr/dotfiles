@@ -12,11 +12,9 @@ Clone this repository into home directory (`~/`).
 ### Font
 
 At first, install fonts for powerline (iterm2)  and airline (vim).
+Please refer to [this repository](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
 
-```
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
-```
+
 
 ### Zsh
 
